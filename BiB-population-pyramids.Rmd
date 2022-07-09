@@ -1,0 +1,319 @@
+---
+authors:
+    - name: "Cédric Scherer (maintainer)"
+      url: https://www.cedricscherer.com  
+      affiliation: Independent Data Visualization Specialist
+      affiliation_url: https://www.cedricscherer.com 
+    - name: "Thomas Skora (contributor)"
+      url:
+      affiliation: Bundesinstitut für Bevölkerungsforschung
+      affiliation_url: https://www.bib.bund.de/EN/Home.html
+    - name: "Kay Ochel (contributor)"
+      url:
+      affiliation: Bundesinstitut für Bevölkerungsforschung
+      affiliation_url: https://www.bib.bund.de/EN/Home.html
+date: "`r Sys.Date()`" 
+output: 
+  distill::distill_article:
+    highlight: kate       ## styling of code
+    code_folding: true    ## if `true` you can expand and shrink code chunks
+    toc: true             ## if `true` adds a table of content
+    toc_depth: 2          ## level to be displayed in the table of content
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      dev = "ragg_png", dpi = 250, retina = 1, layout = "l-page",
+                      fig.width = 240*0.0393701, fig.height = 137*0.0393701) ## mm to inch
+```
+
+```{r prep}
+## Packages
+library(tidyverse)     ## für "Data Science Workflows", umfasst auch ggplot2
+library(here)          ## für vereinfachte Ordnernavigation
+library(readxl)        ## für Datenimport
+library(systemfonts)   ## für indivudalle Schriftarten
+library(patchwork)     ## zum Kombinieren von Plots
+library(scico)         ## Scico Farbpaletten
+library(rcartocolor)   ## Carto Farbpaletten
+library(RColorBrewer)  ## ColorBrewer Farbpaletten
+library(colorspace)    ## zum Adjustieren von Farben
+
+## Funktionen
+source(here("src", "bib-pyramid-functions.R"))
+
+## Allg. Achsentitel
+title_x_m <- sprintf("\u2190  **Männer** in Tausend")
+title_x_f <- sprintf("**Frauen** in Tausend  \u2192")
+```
+
+
+## 1. Bevölkerung
+
+```{r 01-bevoelkerung}
+## Daten -----------------------------------------------------------------------
+
+## Beispieldatensatz für die Bevölkerung inkl. Überschüssen
+example <- here("data", "Daten_Pyramiden_Broschuere_Bevoelkerung.xlsx")
+
+## Einlesen der jeweiligen Arbeitsblätter
+data_91 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_1991")
+data_06 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_2006")
+data_21 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#943C71", "#79afa9") # trq_prp
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "01_bevoelkerung")
+```
+
+Die hier im Folgenden genutzten Originalaten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. Die folgenden Codes lassen sich mit dem Beispieldatensatz nicht ausführen und werden nur der Vollständigkeit und Transparenz halber gezeigt.
+
+## 2. Familienstand
+
+```{r 02-familienstand, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Familienstand_1991")
+data_06 <- prep_data_pyramid(sheet = "Familienstand_2006")
+data_21 <- prep_data_pyramid(sheet = "Familienstand_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#A6A6A6", "#F7AF7A", "#F27279", "#72B2C3") 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "02_familienstand")
+```
+
+
+## 3. Schulabschluss
+
+```{r 03-schulabschluss, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Schulabschluss_1991")
+data_06 <- prep_data_pyramid(sheet = "Schulabschluss_2006")
+data_21 <- prep_data_pyramid(sheet = "Schulabschluss_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- desaturate(carto_pal(n = 5, name = "ag_GrnYl"), .25) 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "03_schulabschluss")
+```
+
+
+## 4. Berufsabschluss
+
+```{r 04-berufsabschluss, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Berufsabschluss_1991")
+data_06 <- prep_data_pyramid(sheet = "Berufsabschluss_2006")
+data_21 <- prep_data_pyramid(sheet = "Berufsabschluss_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- rev(c("grey50", "#ECED8D", desaturate(darken(carto_pal(n = 3, name = "TealGrn")[2:3], .05), .15))) 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "04_berufsabschluss")
+```
+
+
+## 5. Erwerb
+
+```{r 05-erwerb, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Erwerb_1991")
+data_06 <- prep_data_pyramid(sheet = "Erwerb_2006")
+data_21 <- prep_data_pyramid(sheet = "Erwerb_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#B5AA99", "#FAC45E", "#1C6773") # grn_or_tan
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "05_erwerb")
+```
+
+
+## 6. Stellung im Beruf
+
+```{r 06-stellungberuf, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Stellung_Beruf_1991")
+data_06 <- prep_data_pyramid(sheet = "Stellung_Beruf_2006")
+data_21 <- prep_data_pyramid(sheet = "Stellung_Beruf_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#B5AA99", "#72162d", "#d85c32", "#385358", "#39757d", "#189cb2", "#57c4d6") 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "06_stellungberuf")
+```
+
+
+## 7. Einkommen
+
+```{r 07-einkommen, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Einkommen_1991")
+data_06 <- prep_data_pyramid(sheet = "Einkommen_2006")
+data_21 <- prep_data_pyramid(sheet = "Einkommen_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#5a876b", "#e8c884", "grey45") 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "07_einkommen")
+```
+
+## 8. Rente
+
+```{r 08-rente, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Rente_1991")
+data_06 <- prep_data_pyramid(sheet = "Rente_2006")
+data_21 <- prep_data_pyramid(sheet = "Rente_2019")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#416ab2", "#c2c83e") # drv_pale
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors, title_3 = "2019")
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "08_rente")
+```
+
+
+## 9. Migration
+
+```{r 09-migration, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Gesamt_1991") # missing
+data_05 <- prep_data_pyramid(sheet = "Migrationshintergrund_2005")
+data_21 <- prep_data_pyramid(sheet = "Migrationshintergrund_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- desaturate(darken(scico(palette = "imola", n = 3), .1), .25)
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids_2(colors = colors)
+
+p91_grey <- 
+  draw_pyramid(data_91, colors = c("grey87")) + 
+  theme(legend.position = "none")
+
+p_list_grey <- list(p91_grey, p_list[[1]], p_list[[2]])
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list_grey, name = "09_migration")
+```
+
+
+## 10. Lebensform
+
+```{r 10-lebensform, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Lebensform_1996")
+data_06 <- prep_data_pyramid(sheet = "Lebensform_2006")
+data_21 <- prep_data_pyramid(sheet = "Lebensform_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#BE6585", "#D39EAE", "#7EDAC9", "#2E8C8E", "#F4C4B7") 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors, title_1 = "1996")
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "10_lebensform")
+```
+
+
+## 11. Haushaltsgröße
+
+```{r 11-haushaltsgroesse, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Haushaltsgroesse_1991")
+data_06 <- prep_data_pyramid(sheet = "Haushaltsgroesse_2006")
+data_21 <- prep_data_pyramid(sheet = "Haushaltsgroesse_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- scico(palette = "davos", n = 5, end = .85, begin = .05)
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "11_haushaltsgroesse")
+```
+
+
+## 12. Größe der Wohnsitzgemeinde
+
+```{r 12-gemeindegroesse, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "GGRK_1991")
+data_06 <- prep_data_pyramid(sheet = "GGRK_2006")
+data_21 <- prep_data_pyramid(sheet = "GGRK_2021")
+
+## Farben ----------------------------------------------------------------------
+colors <- rev(desaturate(lighten(brewer.pal(name = "BrBG", n = 4), .1), .25))
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors)
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "12_gemeindegroesse")
+```
+
+
+## 13. Umzug
+
+```{r 13-umzug, eval=FALSE}
+## Daten -----------------------------------------------------------------------
+data_91 <- prep_data_pyramid(sheet = "Umzug_1991")
+data_06 <- prep_data_pyramid(sheet = "Umzug_2006")
+data_21 <- prep_data_pyramid(sheet = "Umzug_2019")
+
+## Farben ----------------------------------------------------------------------
+colors <- c("#CB2A76", "#cacaa5", "grey45") 
+
+## Einzelpyramiden -------------------------------------------------------------
+p_list <- draw_set_pyramids(colors = colors, title_3 = "2019")
+
+## Pyramiden-Panel -------------------------------------------------------------
+draw_all_pyramids(plots = p_list, name = "13_umzug")
+```
+
+
+<details><summary>Session Info</summary>
+
+```{r sessionInfo, echo=FALSE}
+Sys.time()
+#git2r::repository()
+sessionInfo()
+```
+
+</details>
+
+
