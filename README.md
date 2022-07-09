@@ -20,6 +20,14 @@ Grafische Darstellung: Cédric Scherer
 
 **&rarr; Grafiken, Animationen und mehr Infos hier:<br>[www.bib.bund.de/pyramiden](https://www.bib.bund.de/pyramiden)**<br><br>
  
+</div>
+ 
+ <h1 style="font-weight:bold" align="center">
+  &nbsp;Rediscovering demographic change&nbsp;
+</h1>
+
+<div align="center">
+ 
 *Functions and Rmd notebook to create various colorful population pyramids in R with `{ggplot2}`. The graphics have been used to design static visualization for the report "Rediscovering demographic change" published by the [German Federal Institute for Population Research (BIB)](https://www.bib.bund.de/EN/Institute/Institute.html). In addition, animated versions that explain how and why the patterns change over time were designed for social media and webpages.*
 
 Data source: Microcensus  
