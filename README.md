@@ -30,7 +30,7 @@ Data source: Microcensus
 Calculations: Federal Institute for Population Research (BIB)  
 Graphical illustration: Cédric Scherer  
 
-***&rarr; Graphics, animations and more information here:<br>[www.bib.bund.de/pyramiden](https://www.bib.bund.de/pyramiden)***
+***&rarr; Graphics, animations and more information here:<br>[www.bib.bund.de/pyramiden](https://www.bib.bund.de/pyramiden)***<br><br>
 
 </div>
 
