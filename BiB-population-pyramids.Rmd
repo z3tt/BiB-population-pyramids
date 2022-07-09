@@ -1,9 +1,10 @@
 ---
+title: 'Grafiken für den Bericht "Demografischen Wandel neu erleben"'
+subtitle: 'im Auftrag des Bundesinstitut für Bevölkerungsforschung (BiB)'
 authors:
-    - name: "Cédric Scherer (maintainer)"
+    - name: "Cédric Scherer (author)"
       url: https://www.cedricscherer.com  
-      affiliation: Independent Data Visualization Specialist
-      affiliation_url: https://www.cedricscherer.com 
+      affiliation: Cédric Scherer Data Visualization Design
     - name: "Thomas Skora (contributor)"
       url:
       affiliation: Bundesinstitut für Bevölkerungsforschung
@@ -15,17 +16,18 @@ authors:
 date: "`r Sys.Date()`" 
 output: 
   distill::distill_article:
-    highlight: kate       ## styling of code
-    code_folding: true    ## if `true` you can expand and shrink code chunks
-    toc: true             ## if `true` adds a table of content
-    toc_depth: 2          ## level to be displayed in the table of content
+    highlight: kate   
+    toc: true          
+    toc_depth: 2       
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
                       dev = "ragg_png", dpi = 250, retina = 1, layout = "l-page",
                       fig.width = 240*0.0393701, fig.height = 137*0.0393701) ## mm to inch
 ```
+
+# Vorbereitung
 
 ```{r prep}
 ## Packages
@@ -45,24 +47,23 @@ source(here("src", "bib-pyramid-functions.R"))
 ## Allg. Achsentitel
 title_x_m <- sprintf("\u2190  **Männer** in Tausend")
 title_x_f <- sprintf("**Frauen** in Tausend  \u2192")
+
+## Beispieldatensatz für die Bevölkerung inkl. Überschüssen
+example <- here("data", "Daten_Pyramiden_Broschuere_Bevoelkerung.xlsx")
 ```
 
+# Grafiken
 
 ## 1. Bevölkerung
 
 ```{r 01-bevoelkerung}
 ## Daten -----------------------------------------------------------------------
-
-## Beispieldatensatz für die Bevölkerung inkl. Überschüssen
-example <- here("data", "Daten_Pyramiden_Broschuere_Bevoelkerung.xlsx")
-
-## Einlesen der jeweiligen Arbeitsblätter
 data_91 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_1991")
 data_06 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_2006")
 data_21 <- prep_data_pyramid(file = example, sheet = "Bevoelkerung_2021")
 
 ## Farben ----------------------------------------------------------------------
-colors <- c("#943C71", "#79afa9") # trq_prp
+colors <- c("#943C71", "#79afa9") 
 
 ## Einzelpyramiden -------------------------------------------------------------
 p_list <- draw_set_pyramids(colors = colors)
@@ -71,7 +72,7 @@ p_list <- draw_set_pyramids(colors = colors)
 draw_all_pyramids(plots = p_list, name = "01_bevoelkerung")
 ```
 
-Die hier im Folgenden genutzten Originalaten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. Die folgenden Codes lassen sich mit dem Beispieldatensatz nicht ausführen und werden nur der Vollständigkeit und Transparenz halber gezeigt.
+Die hier im Folgenden genutzten Originaldaten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. Die folgenden Codes lassen sich mit dem Beispieldatensatz nicht ausführen und werden nur der Vollständigkeit und Transparenz halber gezeigt.
 
 ## 2. Familienstand
 
@@ -310,7 +311,7 @@ draw_all_pyramids(plots = p_list, name = "13_umzug")
 
 ```{r sessionInfo, echo=FALSE}
 Sys.time()
-#git2r::repository()
+git2r::repository()
 sessionInfo()
 ```
 

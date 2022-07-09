@@ -8,9 +8,9 @@
 #' Einstellungen für die Erstellung von Populationspyramiden mit ggplot2.
 #' Das Theme nutzt zwei Schrifarten, Iosevka Slab und BundesSans Web. Beide 
 #' Schrifarten müssen auf dem System lokal installiert sein; erstere ist als 
-#' open-source Porjekt unter https://github.com/be5invis/Iosevka erhältlich. 
+#' open-source Projekt unter https://github.com/be5invis/Iosevka verfügbar 
 #' Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf.
-#' gegen eine andere, verfügabre Schriftart ausgetauscht werden.
+#' gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
 #' 
 #' 
 #' @param base_size Referenzschriftgrüße (in pts)
@@ -85,7 +85,6 @@ theme_bib <- function(base_size = 7, base_family = "BundesSans Web",
 #'                wenn FALSE wird jedes n-te Label entfernt
 #' 
 #' @examples
-#' every_nth(1:10, nth = 3)
 #' every_nth(1:10, nth = 3) 
 #' every_nth(1:10, nth = 3, inverse = FALSE) 
 
