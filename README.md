@@ -62,8 +62,11 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
 ### Hinweise zum Nutzen des Codes
 
 * Die [Daten](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in diesme Repository umfassen zu Illustrationszwecken lediglich die generellen Bevölkerungsdaten. Die anderen genutzten Daten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. 
+  
 * Das Notebook [`BiB-population-pyramids.Rmd`](https://github.com/z3tt/BiB-population-pyramids/blob/main/) lädt die entsprechenden Daten und generiert die 3er Pyramiden als SVG Datei (zur Weiterverarbeitung) sowie Versionen mit einer Legende als PDF und PNG Dateien. 
+  
 * Das Skript [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) enthält die Funktionen zur Erstellung der Pyramiden. Die Funktionen sind *nested*: Die Hauptfunktion ist `draw_set_pyramids()` (bzw. `draw_set_pyramids_2()`) welches die Pyramiden mit Hilfe der Funktion `draw_pyramid()` erstellt und anschließend in einem Gesamtlayout zusammenfügt. Die Funktion `draw_pyramid()` wiederum nutzt die Funktion `draw_pyramid_side()` zur Erstellung der linken und rechten Pyramidenhälfte. Zum Speichern der Grafiken in verschiedenen Formaten sowie zur Druchführung der Simulation von Farbblindheit wird die Funktion `draw_all_pyramids()` genutzt. Zudem erhält das Skript eine Helferfunktion names `every_nth()` sowie ein eigens für die Pyramiden entworfenes `{ggplot2}` Theme namens `theme_bib()`.
+  
 * Das Theme nutzt zwei Schrifarten, Iosevka Slab und BundesSans Web. Beide Schrifarten müssen auf dem System lokal installiert sein; erstere ist als open-source Projekt unter [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka) verfügbar. Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf. gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
 
 
@@ -71,8 +74,11 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
 
 
 * *The [data](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in this repository includes only the general population data for illustrative purposes. The other data used are subject to a retention period and are therefore not part of the repository.*
+  
 * *The notebook [`BiB-population-pyramids.Rmd`](https://github.com/z3tt/BiB-population-pyramids/blob/main/) loads the corresponding data and generates the 3 pyramids as SVG files (for further processing) as well as versions with a legend as PDF and PNG files.*
+  
 * *The script [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) contains the functions to create the pyramids. The functions are **nested**: The main function is `draw_set_pyramids()` (or `draw_set_pyramids_2()`) which creates the pyramids using the function `draw_pyramid()` and then assembles them into an overall layout. The function `draw_pyramid()` in turn uses the function `draw_pyramid_side()` to create the left and right halves of the pyramid. The function `draw_all_pyramids()` is used to save the graphics in different formats and to simulate colour blindness. In addition, the script holds a helper function called `every_nth()` as well as a specially designed `{ggplot2}` theme for the pyramids called `theme_bib()`.*
+  
 * *The theme uses two fonts, Iosevka Slab and BundesSans Web. Both fonts must be installed locally on the system; the former is available as an open-source project at [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka). However, the BundesSans font is not freely available and may have to be exchanged for another font installed on the system.*
   
 <br><br>
