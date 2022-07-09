@@ -19,10 +19,6 @@ Berechnungen: Bundesinstitut für Bevölkerungsforschung (BiB)
 Grafische Darstellung: Cédric Scherer  
 
 **&rarr; Grafiken, Animationen und mehr Infos hier:<br>[www.bib.bund.de/pyramiden](https://www.bib.bund.de/pyramiden)**<br><br>
-
----
-
- <br>
  
 *Functions and Rmd notebook to create various colorful population pyramids in R with `{ggplot2}`. The graphics have been used to design static visualization for the report "Rediscovering demographic change" published by the [German Federal Institute for Population Research (BIB)](https://www.bib.bund.de/EN/Institute/Institute.html). In addition, animated versions that explain how and why the patterns change over time were designed for social media and webpages.*
 
@@ -34,6 +30,11 @@ Graphical illustration: Cédric Scherer
 
 </div>
 
+<br>
+
+---
+
+<br>
 
 ## Rohgrafik (*raw graphics*)
 
@@ -48,8 +49,11 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
 
 ![./plots/01_bevoelkerung_cvd.png](https://raw.githubusercontent.com/z3tt/BiB-population-pyramids/main/plots/01_bevoelkerung_cvd.png)
 
+<br>
 
 ---
+
+<br>
 
 ### Hinweise zum Nutzen des Codes
 
