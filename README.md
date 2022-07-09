@@ -5,9 +5,6 @@
 <h1 style="font-weight:bold" align="center">
   &nbsp;Demografischen Wandel neu entdecken&nbsp;
 </h1>
-<h3 style="font-weight:italic;" align="center">
-  Rediscovering demographic change<br><br>
-</h3>
 
 <div align="center">
 
