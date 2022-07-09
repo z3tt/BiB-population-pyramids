@@ -37,11 +37,11 @@ Graphical illustration: Cédric Scherer
 
 ## Rohgrafik (*raw graphics*)
 
+![./plots/01_bevoelkerung.png](https://raw.githubusercontent.com/z3tt/BiB-population-pyramids/main/plots/01_bevoelkerung.png)
+
 Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutschland im Jahr 1991, 2006 und 2021. Die hier gezeigte Grafik ist das direkte Ergebnis des Codes und wurde in der Programmiersprache R mit Hilfe der Grafikbibliothek `{ggplot2}` erstellt. Die finalen statischen Visualisierungen sowie Animationen wurden im Anschluss mit einem Vektrografikprogramm erstellt. 
   
 *The exemplary visualisation of the general population structure in Germany in 1991, 2006 and 2021. The graphic shown here is the direct result of the code and was created in the programming language R with the help of the graphics library `{ggplot2}`. The final static visualisations as well as animations were subsequently created with a vector graphics tool.*
-
-![./plots/01_bevoelkerung.png](https://raw.githubusercontent.com/z3tt/BiB-population-pyramids/main/plots/01_bevoelkerung.png)
 
 
 ### Simulation von Farbblindheit (*CVD simulation*)
