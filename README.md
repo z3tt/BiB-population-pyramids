@@ -3,7 +3,7 @@
 
 
 <h1 style="font-weight:bold" align="center">
-  &nbsp;Demografischen Wandel neu entdecken&nbsp;
+  &nbsp;Grafiken zum Bericht "Demografischen Wandel neu entdecken"&nbsp;
 </h1>
 
 <div align="center">
@@ -20,7 +20,7 @@ Grafische Darstellung: Cédric Scherer
 </div>
  
  <h1 style="font-weight:bold" align="center">
-  &nbsp;Rediscovering demographic change&nbsp;
+  &nbsp;Graphics for the report "Rediscovering demographic change"&nbsp;
 </h1>
 
 <div align="center">
