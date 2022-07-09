@@ -1,5 +1,4 @@
-
- 
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa] 
 
 
 <h1 style="font-weight:bold" align="center">
@@ -75,3 +74,12 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
 * *The notebook [`BiB-population-pyramids.Rmd`](https://github.com/z3tt/BiB-population-pyramids/blob/main/) loads the corresponding data and generates the 3 pyramids as SVG files (for further processing) as well as versions with a legend as PDF and PNG files.*
 * *The script [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) contains the functions to create the pyramids. The functions are **nested**: The main function is `draw_set_pyramids()` (or `draw_set_pyramids_2()`) which creates the pyramids using the function `draw_pyramid()` and then assembles them into an overall layout. The function `draw_pyramid()` in turn uses the function `draw_pyramid_side()` to create the left and right halves of the pyramid. The function `draw_all_pyramids()` is used to save the graphics in different formats and to simulate colour blindness. In addition, the script holds a helper function called `every_nth()` as well as a specially designed `{ggplot2}` theme for the pyramids called `theme_bib()`.*
 * *The theme uses two fonts, Iosevka Slab and BundesSans Web. Both fonts must be installed locally on the system; the former is available as an open-source project at [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka). However, the BundesSans font is not freely available and may have to be exchanged for another font installed on the system.*
+  
+<br><br>
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
