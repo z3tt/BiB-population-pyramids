@@ -67,7 +67,7 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
   
 * Das Skript [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) enthält die Funktionen zur Erstellung der Pyramiden. Die Funktionen sind *nested*: Die Hauptfunktion ist `draw_set_pyramids()` (bzw. `draw_set_pyramids_2()`) welches die Pyramiden mit Hilfe der Funktion `draw_pyramid()` erstellt und anschließend in einem Gesamtlayout zusammenfügt. Die Funktion `draw_pyramid()` wiederum nutzt die Funktion `draw_pyramid_side()` zur Erstellung der linken und rechten Pyramidenhälfte. Zum Speichern der Grafiken in verschiedenen Formaten sowie zur Druchführung der Simulation von Farbblindheit wird die Funktion `draw_all_pyramids()` genutzt. Zudem erhält das Skript eine Helferfunktion names `every_nth()` sowie ein eigens für die Pyramiden entworfenes `{ggplot2}` Theme namens `theme_bib()`.
   
-* Das Theme nutzt zwei Schrifarten, Iosevka Slab und BundesSans Web. Beide Schrifarten müssen auf dem System lokal installiert sein; erstere ist als open-source Projekt unter [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka) verfügbar. Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf. gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
+* Das Theme nutzt zwei Schriftarten, Iosevka Slab und BundesSans Web. Beide Schrifarten müssen auf dem System lokal installiert sein; erstere ist als open-source Projekt unter [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka) verfügbar. Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf. gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
 
 
 ### *Notes on using the code*
@@ -79,7 +79,7 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
   
 * *The script [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) contains the functions to create the pyramids. The functions are **nested**: The main function is `draw_set_pyramids()` (or `draw_set_pyramids_2()`) which creates the pyramids using the function `draw_pyramid()` and then assembles them into an overall layout. The function `draw_pyramid()` in turn uses the function `draw_pyramid_side()` to create the left and right halves of the pyramid. The function `draw_all_pyramids()` is used to save the graphics in different formats and to simulate colour blindness. In addition, the script holds a helper function called `every_nth()` as well as a specially designed `{ggplot2}` theme for the pyramids called `theme_bib()`.*
   
-* *The theme uses two fonts, Iosevka Slab and BundesSans Web. Both fonts must be installed locally on the system; the former is available as an open-source project at [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka). However, the BundesSans font is not freely available and may have to be exchanged for another font installed on the system.*
+* *The theme uses two typefaces, Iosevka Slab and BundesSans Web. Both typefaces must be installed locally on the system; the former is available as an open-source project at [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka). However, the BundesSans typefaces is not freely available and may have to be exchanged for another font installed on the system.*
   
 <br><br>
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
