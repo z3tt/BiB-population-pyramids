@@ -61,13 +61,13 @@ Die beispielhafte Visualisierung der generellen Bevölkerungsstruktur in Deutsch
 
 ### Hinweise zum Nutzen des Codes
 
-* Die [Daten](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in diesme Repository umfassen zu Illustrationszwecken lediglich die generellen Bevölkerungsdaten. Die anderen genutzten Daten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. 
+* Die [Daten](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in diesem Repository umfassen zu Illustrationszwecken lediglich die generellen Bevölkerungsdaten. Die anderen genutzten Daten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories. 
   
 * Das Notebook [`BiB-population-pyramids.Rmd`](https://github.com/z3tt/BiB-population-pyramids/blob/main/) lädt die entsprechenden Daten und generiert die 3er Pyramiden als SVG Datei (zur Weiterverarbeitung) sowie Versionen mit einer Legende als PDF und PNG Dateien. 
   
 * Das Skript [`src/bib-pyramid-functions.R`](https://github.com/z3tt/BiB-population-pyramids/blob/main/src/bib-pyramid-functions.R) enthält die Funktionen zur Erstellung der Pyramiden. Die Funktionen sind *nested*: Die Hauptfunktion ist `draw_set_pyramids()` (bzw. `draw_set_pyramids_2()`) welches die Pyramiden mit Hilfe der Funktion `draw_pyramid()` erstellt und anschließend in einem Gesamtlayout zusammenfügt. Die Funktion `draw_pyramid()` wiederum nutzt die Funktion `draw_pyramid_side()` zur Erstellung der linken und rechten Pyramidenhälfte. Zum Speichern der Grafiken in verschiedenen Formaten sowie zur Druchführung der Simulation von Farbblindheit wird die Funktion `draw_all_pyramids()` genutzt. Zudem erhält das Skript eine Helferfunktion names `every_nth()` sowie ein eigens für die Pyramiden entworfenes `{ggplot2}` Theme namens `theme_bib()`.
   
-* Das Theme nutzt zwei Schriftarten, Iosevka Slab und BundesSans Web. Beide Schrifarten müssen auf dem System lokal installiert sein; erstere ist als open-source Projekt unter [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka) verfügbar. Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf. gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
+* Das Theme nutzt zwei Schriftarten, Iosevka Slab und BundesSans Web. Beide Schriftarten müssen auf dem System lokal installiert sein; erstere ist als open-source Projekt unter [github.com/be5invis/Iosevka](https://github.com/be5invis/Iosevka) verfügbar. Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf. gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
 
 
 ### *Notes on using the code*
