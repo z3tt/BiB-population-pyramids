@@ -76,11 +76,11 @@ theme_bib <- function(base_size = 7, base_family = "BundesSans Web",
 
 #' Einfügen von "subticks" ohne Labels
 #' 
-#' Fügt nur für jedes n-te Tick auf den Achsen ein Label hinzu
+#' Fügt nur für jedem n-ten Achsenteilschritt ein Label hinzu
 #' (Quelle: stackoverflow.com)
 #'
-#' @param x Vektor mit allen Ticks
-#' @param nth Anzahl der übersrpungenen Ticks
+#' @param x Vektor mit allen Achsenteilschritten
+#' @param nth Anzahl der übersrpungenen Achsenteilschritte
 #' @param inverse Wenn TRUE (default) wird nur jedes n-te Label hinzugefügt;
 #'                wenn FALSE wird jedes n-te Label entfernt
 #' 
