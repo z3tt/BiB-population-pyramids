@@ -62,7 +62,7 @@ Die beispielhaften Visualisierungen der generellen Bevölkerungsstruktur sowie d
 
 ### Hinweise zum Nutzen des Codes
 
-* Die [Daten](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in diesem Repository umfassen zu Illustrationszwecken lediglich die generellen Bevölkerungsdaten sowie die Daten zum Familinestand. Die anderen genutzten Daten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories.
+* Die [Daten](https://github.com/z3tt/BiB-population-pyramids/tree/main/data) in diesem Repository umfassen zu Illustrationszwecken lediglich die generellen Bevölkerungsdaten sowie die Daten zum Familienstand. Die anderen genutzten Daten unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories.
 
 * Das Notebook [`BiB-population-pyramids.Rmd`](https://github.com/z3tt/BiB-population-pyramids/blob/main/) lädt die entsprechenden Daten und generiert die 3er Pyramiden als SVG Datei (zur Weiterverarbeitung) sowie Versionen mit einer Legende als PDF und PNG Dateien.
 
