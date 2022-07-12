@@ -40,7 +40,7 @@ Grafische Darstellung: Cédric Scherer
 
 <br>
 
-## Rohgrafik (*raw graphics*)
+## Rohgrafiken (*raw graphics*)
 
 ![./plots/01_bevoelkerung.png](https://raw.githubusercontent.com/z3tt/BiB-population-pyramids/main/plots/01_bevoelkerung.png)
 ![./plots/01_bevoelkerung.png](https://raw.githubusercontent.com/z3tt/BiB-population-pyramids/main/plots/02_familienstand.png)
