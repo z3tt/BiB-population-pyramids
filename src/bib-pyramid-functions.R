@@ -1,6 +1,6 @@
 #' BiB Pyramiden Theme
 #' 
-#' Ein ggplot2 Theme für Populationspyramiden des Bundesinstitut fuer 
+#' Ein ggplot2 Theme für Populationspyramiden des Bundesinstitut für 
 #' Bevölkerungsforschung
 #' 
 #' Ein "visual theme" für die Nutzung in Kombination mit der Grafikbibliothek 
