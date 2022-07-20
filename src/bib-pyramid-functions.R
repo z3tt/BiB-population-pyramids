@@ -10,7 +10,7 @@
 #' Schrifarten müssen auf dem System lokal installiert sein; erstere ist als 
 #' open-source Projekt unter https://github.com/be5invis/Iosevka verfügbar 
 #' Die Schriftart BundesSans ist jedoch nicht frei erhältlich und muss ggf.
-#' gegen eine andere, auf dem System instalierte Schriftart ausgetauscht werden.
+#' gegen eine andere, auf dem System installierte Schriftart ausgetauscht werden.
 #' 
 #' 
 #' @param base_size Referenzschriftgrüße (in pts)
