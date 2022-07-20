@@ -80,7 +80,7 @@ theme_bib <- function(base_size = 7, base_family = "BundesSans Web",
 #' (Quelle: stackoverflow.com)
 #'
 #' @param x Vektor mit allen Achsenteilschritten
-#' @param nth Anzahl der übersrpungenen Achsenteilschritte
+#' @param nth Anzahl der übersprungenen Achsenteilschritte
 #' @param inverse Wenn TRUE (default) wird nur jedes n-te Label hinzugefügt;
 #'                wenn FALSE wird jedes n-te Label entfernt
 #' 
@@ -109,7 +109,7 @@ every_nth <- function(x, nth, inverse = TRUE, label = NULL)
 #' 
 #' Einlesen und Aufbereiten der Daten. Der Pfad zu den Daten sowie der Name der
 #' xlsx-Datei ist vorgegeben (da immer gleich). Die xsls-Datei liegt in unserem
-#' Fall in einem Unterordner namens `data`. Die hier angegebenen Originalaten 
+#' Fall in einem Unterordner namens `data`. Die hier angegebenen Originaldaten 
 #' unterliegen einer Sperrfrist und sind daher nicht Teil des Repositories.
 #' 
 #' @param file Die xsls Datei in mit den Bevölkerungsdaten in einem vordefiniertem
